@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: superloopernominatimks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: superloopernominatimks
+  template:
+    metadata:
+      labels:
+        app: superloopernominatimks 
+    spec:
+      containers:
+        - name: superloopernominatimks 
+          image: containerregistry1tan.azurecr.io/superloopernominatimks
+          ports:
+          - containerPort: 5432
